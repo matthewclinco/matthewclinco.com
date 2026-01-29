@@ -4,45 +4,130 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | Matthew Clinco</title>
-  <link rel="stylesheet" href="/assets/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Selected operational work products demonstrating governance, controls, and execution under constraint." />
+  <link rel="canonical" href="https://www.matthewclinco.com/portfolio/" />
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
+
 <body>
   <div class="wrap">
-    <section class="top">
-      <div>
-        <h1 class="h1">Portfolio</h1>
-        <p class="sub">Selected work products and historical examples.</p>
-      </div>
+
+    <!-- Header -->
+    <header class="top">
+      <h1>Portfolio</h1>
+      <p class="subtitle">
+        Concrete work products from real operating environments.
+      </p>
+
       <nav class="nav">
-        <a class="btn" href="/">home</a>
-        <a class="btn" href="/resume/">/resume</a>
-        <a class="btn" href="/anduril/">/anduril</a>
+        <a href="/">home</a>
+        <a href="/anduril/">anduril</a>
+        <a href="/resume/">resume</a>
       </nav>
+    </header>
+
+    <!-- Framing -->
+    <section class="panel">
+      <p>
+        These artifacts were built to solve operational problems under real constraints:
+        regulatory requirements, safety risk, staffing volatility, and time pressure.
+        They are not polished thought pieces. They are tools that were used.
+      </p>
+      <p>
+        Some are historical. The operating patterns are current.
+      </p>
     </section>
 
-    <section class="card" style="margin-top:18px;">
-      <h2>Artifacts</h2>
-      <ul class="list">
-        <li class="item">
-          <a href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noreferrer">
-            Workplace Governance for High-Tempo Operations (PDF)
-          </a>
-          <small>Case study</small>
-        </li>
-        <li class="item">
-          <a href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noreferrer">
-            Manager Playbook 2015–2024 (PDF)
-          </a>
-          <small>Historical example</small>
-        </li>
-        <li class="item">
-          <span>Excel FACT SHEET Sample (XLSX)</span>
-          <small>upload later</small>
-        </li>
-      </ul>
+    <!-- Artifacts -->
+    <section class="panel">
+      <h2>Work products</h2>
+
+      <div class="artifact">
+        <div>
+          <strong>Workplace Governance for High-Tempo Operations</strong>
+          <span class="tag">Case study</span>
+        </div>
+        <p>
+          A governance framework designed to support fast execution while preserving
+          compliance, auditability, and clear ownership.
+        </p>
+        <p class="meta">
+          Constraint: inspection-driven environment, multi-site operations, limited tolerance for failure.
+        </p>
+        <a href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noopener">
+          View PDF
+        </a>
+      </div>
+
+      <div class="artifact">
+        <div>
+          <strong>Manager Playbook (2015–2024)</strong>
+          <span class="tag">Historical example</span>
+        </div>
+        <p>
+          A practical operating manual translating policy, labor rules, and safety requirements
+          into decision-ready guidance for frontline leaders.
+        </p>
+        <p class="meta">
+          Constraint: high turnover, variable manager experience, and continuous operational load.
+        </p>
+        <a href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noopener">
+          View PDF
+        </a>
+      </div>
+
+      <div class="artifact">
+        <div>
+          <strong>Résumé (Formatted)</strong>
+          <span class="tag">Reference</span>
+        </div>
+        <p>
+          Standard résumé for human review, emphasizing scope, outcomes, and operational impact.
+        </p>
+        <a href="/assets/docs/resume.pdf" target="_blank" rel="noopener">
+          View PDF
+        </a>
+      </div>
+
+      <div class="artifact">
+        <div>
+          <strong>Résumé (ATS)</strong>
+          <span class="tag">Reference</span>
+        </div>
+        <p>
+          ATS-optimized version preserving content fidelity while improving parsing and keyword alignment.
+        </p>
+        <a href="/assets/docs/ats-resume.pdf" target="_blank" rel="noopener">
+          View PDF
+        </a>
+      </div>
+
+      <div class="artifact">
+        <div>
+          <strong>Excel FACT SHEET</strong>
+          <span class="tag">Coming soon</span>
+        </div>
+        <p>
+          Pre-SaaS operational fact sheet used to standardize reporting and decision-making
+          before centralized tooling existed.
+        </p>
+        <p class="meta">
+          Constraint: no shared systems, manual data reconciliation, executive reporting needs.
+        </p>
+        <span class="muted">Upload pending</span>
+      </div>
     </section>
+
+    <!-- Footer CTA -->
+    <section class="panel callout">
+      <p>
+        For role-specific context, see the <a href="/anduril/">Anduril page</a>.
+        For a fast overview, see the <a href="/resume/">résumé</a>.
+      </p>
+    </section>
+
   </div>
 </body>
 </html>
