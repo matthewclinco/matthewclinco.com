@@ -10,125 +10,373 @@
   <meta name="description" content="Selected operational work products demonstrating governance, controls, and execution under constraint." />
   <link rel="canonical" href="https://www.matthewclinco.com/portfolio/" />
   <link rel="stylesheet" href="/assets/style.css">
+
+  <style>
+    /* Page-scoped upgrades: distinct tiles + 2026 dark motif */
+    :root{
+      --p-bg: rgba(10,12,15,.72);
+      --p-panel: rgba(18,22,27,.72);
+      --p-tile: rgba(255,255,255,.035);
+      --p-tile2: rgba(255,255,255,.06);
+      --p-line: rgba(255,255,255,.12);
+      --p-line2: rgba(255,255,255,.18);
+      --p-muted: rgba(230,237,243,.72);
+      --p-faint: rgba(230,237,243,.55);
+      --p-radius: 18px;
+      --p-shadow: 0 20px 70px rgba(0,0,0,.45);
+    }
+
+    .p-wrap{ max-width: 1120px; margin: 0 auto; padding: 56px 22px 44px; }
+    .p-top{
+      border: 1px solid var(--p-line);
+      border-radius: var(--p-radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      box-shadow: var(--p-shadow);
+      padding: 22px 22px 18px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      backdrop-filter: blur(10px);
+    }
+    .p-h1{ margin:0; font-size:28px; letter-spacing:.2px; }
+    .p-sub{ margin:6px 0 0; color: var(--p-muted); font-size:14.5px; max-width: 62ch; }
+    .p-nav{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .p-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--p-line);
+      background: rgba(0,0,0,.18);
+      text-decoration:none;
+      color: rgba(230,237,243,.92);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      font-size: 12.5px;
+    }
+    .p-btn:hover{ background: rgba(255,255,255,.05); border-color: var(--p-line2); text-decoration:none; }
+
+    .p-grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 980px){
+      .p-grid{ grid-template-columns: 1.35fr .65fr; gap: 16px; }
+    }
+
+    .p-panel{
+      border: 1px solid var(--p-line);
+      border-radius: var(--p-radius);
+      background: var(--p-panel);
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      padding: 16px;
+    }
+    .p-panel h2{
+      margin:0 0 10px;
+      font-size: 12.5px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(230,237,243,.82);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+    }
+
+    .p-tiles{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 760px){
+      .p-tiles{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .tile{
+      border: 1px solid var(--p-line);
+      border-radius: 16px;
+      background: linear-gradient(180deg, var(--p-tile), rgba(0,0,0,.14));
+      padding: 14px 14px 12px;
+      position:relative;
+      overflow:hidden;
+      min-height: 178px;
+    }
+    .tile:hover{ border-color: var(--p-line2); background: linear-gradient(180deg, var(--p-tile2), rgba(0,0,0,.16)); }
+    .tile:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(520px 220px at 20% 10%, rgba(255,255,255,.06), transparent 60%),
+        radial-gradient(520px 220px at 85% 0%, rgba(255,255,255,.05), transparent 55%);
+      pointer-events:none;
+      opacity:.9;
+    }
+    .tile > *{ position:relative; }
+
+    .t-head{
+      display:flex;
+      gap:10px;
+      justify-content:space-between;
+      align-items:flex-start;
+      margin-bottom: 8px;
+    }
+    .t-title{ margin:0; font-size: 15px; font-weight: 650; letter-spacing:.15px; }
+    .t-tag{
+      font-size: 11px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      color: rgba(230,237,243,.78);
+      border: 1px solid var(--p-line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: rgba(0,0,0,.18);
+      white-space:nowrap;
+    }
+    .t-desc{ margin:0; color: var(--p-muted); font-size: 13px; }
+    .t-meta{
+      margin-top: 10px;
+      color: var(--p-faint);
+      font-size: 12.2px;
+      line-height: 1.35;
+      border-top: 1px dashed rgba(255,255,255,.14);
+      padding-top: 10px;
+    }
+    .t-actions{
+      margin-top: 12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .t-link{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      border: 1px solid var(--p-line);
+      border-radius: 12px;
+      padding: 9px 11px;
+      background: rgba(0,0,0,.22);
+      font-size: 12.5px;
+      text-decoration:none;
+    }
+    .t-link:hover{ background: rgba(255,255,255,.05); border-color: var(--p-line2); text-decoration:none; }
+    .t-link.secondary{ color: rgba(230,237,243,.78); }
+
+    .quick{
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+    .q-card{
+      border: 1px solid var(--p-line);
+      border-radius: 16px;
+      background: rgba(0,0,0,.18);
+      padding: 14px;
+    }
+    .q-title{
+      margin:0 0 10px;
+      font-size: 12.5px;
+      letter-spacing:.18em;
+      text-transform: uppercase;
+      color: rgba(230,237,243,.82);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+    }
+    .q-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .q-item{
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 10px 10px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+    }
+    .q-item a{ text-decoration:none; }
+    .q-item a:hover{ text-decoration:underline; }
+    .q-item small{ color: var(--p-faint); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; font-size: 11.5px; }
+
+    .p-foot{
+      margin-top: 14px;
+      color: rgba(230,237,243,.62);
+      font-size: 12.2px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="wrap">
+  <div class="p-wrap">
 
-    <!-- Header -->
-    <header class="top">
-      <h1>Portfolio</h1>
-      <p class="subtitle">
-        Concrete work products from real operating environments.
-      </p>
+    <header class="p-top">
+      <div>
+        <h1 class="p-h1">Portfolio</h1>
+        <p class="p-sub">
+          Work products built for execution under constraint: governance, controls, and operational reliability.
+          Everything is visible here at a glance; click only to open the source artifacts.
+        </p>
+      </div>
 
-      <nav class="nav">
-        <a href="/">home</a>
-        <a href="/anduril/">anduril</a>
-        <a href="/resume/">resume</a>
+      <nav class="p-nav" aria-label="Site navigation">
+        <a class="p-btn" href="/">home</a>
+        <a class="p-btn" href="/anduril/">anduril</a>
+        <a class="p-btn" href="/resume/">resume</a>
       </nav>
     </header>
 
-    <!-- Framing -->
-    <section class="panel">
-      <p>
-        These artifacts were built to solve operational problems under real constraints:
-        regulatory requirements, safety risk, staffing volatility, and time pressure.
-        They are not polished thought pieces. They are tools that were used.
-      </p>
-      <p>
-        Some are historical. The operating patterns are current.
-      </p>
+    <section class="p-grid">
+      <!-- Left: tiles -->
+      <div class="p-panel">
+        <h2>Artifacts</h2>
+
+        <div class="p-tiles">
+          <article class="tile" id="governance">
+            <div class="t-head">
+              <h3 class="t-title">Workplace Governance for High-Tempo Operations</h3>
+              <span class="t-tag">Case study</span>
+            </div>
+            <p class="t-desc">
+              Governance layer that enables speed while preserving compliance, auditability, and clear ownership.
+            </p>
+            <div class="t-meta">
+              Constraint: inspection-driven, multi-site execution; low tolerance for variance and ambiguity.
+            </div>
+            <div class="t-actions">
+              <a class="t-link" href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+              <a class="t-link secondary" href="/assets/docs/workplace-governance-high-tempo.pdf" download>Download</a>
+            </div>
+          </article>
+
+          <article class="tile" id="playbook">
+            <div class="t-head">
+              <h3 class="t-title">Manager Playbook (2015–2024)</h3>
+              <span class="t-tag">Historical example</span>
+            </div>
+            <p class="t-desc">
+              Policies and labor constraints translated into decision-ready guidance for frontline leaders.
+            </p>
+            <div class="t-meta">
+              Constraint: staffing volatility, variable manager experience, continuous operational load.
+            </div>
+            <div class="t-actions">
+              <a class="t-link" href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+              <a class="t-link secondary" href="/assets/docs/manager-playbook-2015-2024.pdf" download>Download</a>
+            </div>
+          </article>
+
+          <article class="tile" id="resume">
+            <div class="t-head">
+              <h3 class="t-title">Resume (Formatted)</h3>
+              <span class="t-tag">Reference</span>
+            </div>
+            <p class="t-desc">
+              Human-readable resume emphasizing scope, outcomes, and operational impact.
+            </p>
+            <div class="t-meta">
+              Use case: hiring manager review, interviews, and stakeholder forwarding.
+            </div>
+            <div class="t-actions">
+              <a class="t-link" href="/assets/docs/resume.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+              <a class="t-link secondary" href="/assets/docs/resume.pdf" download>Download</a>
+            </div>
+          </article>
+
+          <article class="tile" id="ats">
+            <div class="t-head">
+              <h3 class="t-title">Resume (ATS)</h3>
+              <span class="t-tag">Reference</span>
+            </div>
+            <p class="t-desc">
+              ATS-optimized layout that preserves content fidelity while improving parsing.
+            </p>
+            <div class="t-meta">
+              Use case: online applications and recruiter systems.
+            </div>
+            <div class="t-actions">
+              <a class="t-link" href="/assets/docs/ats-resume.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+              <a class="t-link secondary" href="/assets/docs/ats-resume.pdf" download>Download</a>
+            </div>
+          </article>
+
+          <article class="tile" id="excel">
+            <div class="t-head">
+              <h3 class="t-title">Excel FACT SHEET</h3>
+              <span class="t-tag">Add later</span>
+            </div>
+            <p class="t-desc">
+              Pre-SaaS operational fact sheet used to standardize reporting and decision-making without shared systems.
+            </p>
+            <div class="t-meta">
+              Constraint: manual reconciliation, distributed inputs, executive reporting needs.
+            </div>
+            <div class="t-actions">
+              <span class="t-link secondary" aria-disabled="true">Upload pending</span>
+            </div>
+          </article>
+
+          <article class="tile" id="contact">
+            <div class="t-head">
+              <h3 class="t-title">Contact</h3>
+              <span class="t-tag">Direct</span>
+            </div>
+            <p class="t-desc">
+              If you only look at one artifact: open the governance case study. It encodes how I build controls for speed.
+            </p>
+            <div class="t-meta">
+              Los Angeles, CA · <a href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a> ·
+              <a href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+            <div class="t-actions">
+              <a class="t-link" href="/anduril/">Anduril view ↗</a>
+              <a class="t-link secondary" href="/resume/">Resume page ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="p-foot">
+          Canonical: https://www.matthewclinco.com/portfolio/
+        </div>
+      </div>
+
+      <!-- Right: quick nav + downloads -->
+      <aside class="quick" aria-label="Quick navigation">
+        <div class="q-card">
+          <div class="q-title">Quick nav</div>
+          <ul class="q-list">
+            <li class="q-item"><a href="#governance">Governance case study</a><small>#governance</small></li>
+            <li class="q-item"><a href="#playbook">Manager playbook</a><small>#playbook</small></li>
+            <li class="q-item"><a href="#resume">Resume (formatted)</a><small>#resume</small></li>
+            <li class="q-item"><a href="#ats">Resume (ATS)</a><small>#ats</small></li>
+            <li class="q-item"><a href="#excel">Excel fact sheet</a><small>#excel</small></li>
+          </ul>
+        </div>
+
+        <div class="q-card">
+          <div class="q-title">All downloads</div>
+          <ul class="q-list">
+            <li class="q-item"><a href="/assets/docs/workplace-governance-high-tempo.pdf" download>Governance (PDF)</a><small>download</small></li>
+            <li class="q-item"><a href="/assets/docs/manager-playbook-2015-2024.pdf" download>Playbook (PDF)</a><small>download</small></li>
+            <li class="q-item"><a href="/assets/docs/resume.pdf" download>Resume (PDF)</a><small>download</small></li>
+            <li class="q-item"><a href="/assets/docs/ats-resume.pdf" download>ATS (PDF)</a><small>download</small></li>
+          </ul>
+        </div>
+
+        <div class="q-card">
+          <div class="q-title">One-click evaluation</div>
+          <p style="margin:0;color:rgba(230,237,243,.75);font-size:13px;line-height:1.45;">
+            If you only have two minutes:
+            open the governance case study, scan the control table, and skim the escalation/cadence sections.
+          </p>
+        </div>
+      </aside>
     </section>
-
-    <!-- Artifacts -->
-    <section class="panel">
-      <h2>Work products</h2>
-
-      <div class="artifact">
-        <div>
-          <strong>Workplace Governance for High-Tempo Operations</strong>
-          <span class="tag">Case study</span>
-        </div>
-        <p>
-          A governance framework designed to support fast execution while preserving
-          compliance, auditability, and clear ownership.
-        </p>
-        <p class="meta">
-          Constraint: inspection-driven environment, multi-site operations, limited tolerance for failure.
-        </p>
-        <a href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noopener">
-          View PDF
-        </a>
-      </div>
-
-      <div class="artifact">
-        <div>
-          <strong>Manager Playbook (2015–2024)</strong>
-          <span class="tag">Historical example</span>
-        </div>
-        <p>
-          A practical operating manual translating policy, labor rules, and safety requirements
-          into decision-ready guidance for frontline leaders.
-        </p>
-        <p class="meta">
-          Constraint: high turnover, variable manager experience, and continuous operational load.
-        </p>
-        <a href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noopener">
-          View PDF
-        </a>
-      </div>
-
-      <div class="artifact">
-        <div>
-          <strong>Résumé (Formatted)</strong>
-          <span class="tag">Reference</span>
-        </div>
-        <p>
-          Standard résumé for human review, emphasizing scope, outcomes, and operational impact.
-        </p>
-        <a href="/assets/docs/resume.pdf" target="_blank" rel="noopener">
-          View PDF
-        </a>
-      </div>
-
-      <div class="artifact">
-        <div>
-          <strong>Résumé (ATS)</strong>
-          <span class="tag">Reference</span>
-        </div>
-        <p>
-          ATS-optimized version preserving content fidelity while improving parsing and keyword alignment.
-        </p>
-        <a href="/assets/docs/ats-resume.pdf" target="_blank" rel="noopener">
-          View PDF
-        </a>
-      </div>
-
-      <div class="artifact">
-        <div>
-          <strong>Excel FACT SHEET</strong>
-          <span class="tag">Coming soon</span>
-        </div>
-        <p>
-          Pre-SaaS operational fact sheet used to standardize reporting and decision-making
-          before centralized tooling existed.
-        </p>
-        <p class="meta">
-          Constraint: no shared systems, manual data reconciliation, executive reporting needs.
-        </p>
-        <span class="muted">Upload pending</span>
-      </div>
-    </section>
-
-    <!-- Footer CTA -->
-    <section class="panel callout">
-      <p>
-        For role-specific context, see the <a href="/anduril/">Anduril page</a>.
-        For a fast overview, see the <a href="/resume/">résumé</a>.
-      </p>
-    </section>
-
   </div>
 </body>
 </html>
+
