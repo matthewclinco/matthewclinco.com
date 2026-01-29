@@ -1,5 +1,8 @@
 /* ===== Global design system | MatthewClinco.com ===== */
 
+html { scroll-behavior: smooth; }
+:target { scroll-margin-top: 96px; }
+
 :root{
   --bg:#0b0d10;
   --panel:#12161b;
