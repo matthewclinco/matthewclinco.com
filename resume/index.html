@@ -1,7 +1,47 @@
 <link rel="stylesheet" href="/assets/style.css" />
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Resume | Matthew Clinco</title><link rel="stylesheet" href="/assets/style.css"></head>
-<body><main style="font-family:system-ui;margin:40px;">
-<h1>Resume</h1><p>If you can see this page, routing works.</p>
-<p><a href="/">Home</a></p></main></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume | Matthew Clinco</title>
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <section class="top">
+      <div>
+        <h1 class="h1">Resume</h1>
+        <p class="sub">Formatted + ATS versions.</p>
+      </div>
+      <nav class="nav">
+        <a class="btn" href="/">home</a>
+        <a class="btn" href="/portfolio/">/portfolio</a>
+        <a class="btn" href="/anduril/">/anduril</a>
+      </nav>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Downloads</h2>
+        <ul class="list">
+          <li class="item">
+            <a href="/assets/docs/resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+            <small>Formatted</small>
+          </li>
+          <li class="item">
+            <a href="/assets/docs/ats-resume.pdf" target="_blank" rel="noreferrer">ATS Resume (PDF)</a>
+            <small>ATS</small>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Inline view</h2>
+        <p class="kicker">If the embed fails in a given browser, use the download links.</p>
+        <iframe class="embed" src="/assets/docs/resume.pdf" title="Resume PDF"></iframe>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
