@@ -2,97 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Resume | Matthew Clinco</title>
-  <meta name="description" content="Resume downloads and inline view for Matthew Clinco." />
   <link rel="canonical" href="https://www.matthewclinco.com/resume/" />
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
-
 <body>
   <div class="wrap">
-    <header class="top">
-      <div class="brand">
-        <div class="wordmark">MATTHEW CLINCO</div>
-        <div class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</div>
 
+    <header class="header">
+      <div class="brand">
+        <h1 class="name">MATTHEW CLINCO</h1>
+        <p class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</p>
         <div class="chips">
           <span class="chip">Los Angeles, CA</span>
           <a class="chip" href="tel:+16263753322">(626) 375-3322</a>
           <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
-          <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noopener noreferrer">
-            linkedin.com/in/MatthewClinco
-          </a>
+          <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco</a>
         </div>
       </div>
 
-      <nav class="nav">
-        <a class="btn" href="/">home</a>
-        <a class="btn" href="/portfolio/">portfolio</a>
-        <a class="btn" href="/anduril/">anduril</a>
-        <a class="btn active" href="/resume/">resume</a>
+      <nav class="nav" aria-label="Primary">
+        <a class="navbtn" href="/">home</a>
+        <a class="navbtn" href="/portfolio/">portfolio</a>
+        <a class="navbtn" href="/anduril/">anduril</a>
+        <a class="navbtn" href="/resume/" aria-current="page">resume</a>
       </nav>
     </header>
 
-    <main class="grid">
-      <section class="panel">
-        <h2>Resume</h2>
-        <p class="muted">Formatted + ATS versions.</p>
+    <section class="grid">
+      <div class="section">
+        <p class="kicker">Resume</p>
+        <h2 class="h2">Formatted + ATS versions</h2>
+        <p class="meta">Tile click downloads. Inline view is available below.</p>
+
+        <div class="hr"></div>
 
         <div class="tiles">
-          <article class="tile">
-            <div class="tile-head">
-              <h3 class="tile-title">Formatted resume</h3>
-              <span class="tag">PDF</span>
+          <a class="tile" href="/assets/docs/resume.pdf" download>
+            <div class="tilehead">
+              <h3 class="title">Formatted resume</h3>
+              <span class="badge">PDF</span>
             </div>
             <p class="desc">Human-readable version for hiring teams.</p>
             <div class="actions">
-              <a class="link" href="/assets/docs/resume.pdf">download</a>
-              <a class="link" href="#formatted">inline</a>
+              <span class="btn">download</span>
+              <a class="btn" href="#formatted-inline">inline</a>
             </div>
-          </article>
+          </a>
 
-          <article class="tile">
-            <div class="tile-head">
-              <h3 class="tile-title">ATS resume</h3>
-              <span class="tag">PDF</span>
+          <a class="tile" href="/assets/docs/ats-resume.pdf" download>
+            <div class="tilehead">
+              <h3 class="title">ATS resume</h3>
+              <span class="badge">PDF</span>
             </div>
             <p class="desc">Parsing-friendly version for ATS ingestion.</p>
             <div class="actions">
-              <a class="link" href="/assets/docs/ats-resume.pdf">download</a>
-              <a class="link" href="#ats">inline</a>
+              <span class="btn">download</span>
+              <a class="btn" href="#ats-inline">inline</a>
             </div>
-          </article>
+          </a>
         </div>
-      </section>
 
-      <aside class="side">
-        <div class="side-card">
-          <h3>Notes</h3>
-          <p class="meta">
-            If inline viewing fails in your browser, use the download links.
-          </p>
-        </div>
+        <div class="hr"></div>
+
+        <p class="kicker" id="formatted-inline">Formatted (inline)</p>
+        <iframe class="inlineframe" src="/assets/docs/resume.pdf"></iframe>
+
+        <div class="hr"></div>
+
+        <p class="kicker" id="ats-inline">ATS (inline)</p>
+        <iframe class="inlineframe" src="/assets/docs/ats-resume.pdf"></iframe>
+
+        <p class="footer">Last updated: 2026-01-29</p>
+      </div>
+
+      <aside class="sidecard">
+        <p class="kicker">Notes</p>
+        <p class="meta">
+          If inline viewing fails in your browser, use the download tiles above.
+        </p>
+        <div class="hr"></div>
+        <p class="small">All files served from <span class="badge">/assets/docs/</span>.</p>
       </aside>
-    </main>
-
-    <section class="panel" id="formatted">
-      <h3>Formatted (inline)</h3>
-      <div class="embed">
-        <iframe title="Formatted resume" src="/assets/docs/resume.pdf" loading="lazy"></iframe>
-      </div>
     </section>
 
-    <section class="panel" id="ats">
-      <h3>ATS (inline)</h3>
-      <div class="embed">
-        <iframe title="ATS resume" src="/assets/docs/ats-resume.pdf" loading="lazy"></iframe>
-      </div>
-    </section>
-
-    <footer class="foot">
-      <span class="muted">Last updated: 2026-01-29</span>
-    </footer>
   </div>
 </body>
 </html>
