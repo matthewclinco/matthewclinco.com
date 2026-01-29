@@ -1,24 +1,22 @@
-/* ==========================================================================
-   MatthewClinco.com — Sitewide Design System (2026 dark, tile-based)
-   Drop-in replacement for /assets/style.css
-   ========================================================================== */
-
-/* ---- Theme tokens ---- */
 :root{
   --bg:#07090c;
   --panel:#0c1117;
   --panel2:#0a0f14;
-  --tile:#0b1016;
-  --tile2:#0b1016;
-  --line: rgba(255,255,255,.10);
-  --line2: rgba(255,255,255,.14);
+
+  --tile: rgba(255,255,255,.045);
+  --tileHover: rgba(255,255,255,.14);
+
+  --line: rgba(255,255,255,.12);
+  --line2: rgba(255,255,255,.22);
+
   --text:#e7edf5;
   --muted: rgba(231,237,245,.72);
   --faint: rgba(231,237,245,.55);
-  --focus: rgba(121,227,243,.18);
+
   --shadow: 0 22px 90px rgba(0,0,0,.55);
   --radius: 18px;
   --radius2: 22px;
+
   --max: 1040px;
   --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -39,7 +37,7 @@ body{
 }
 
 a{color:inherit; text-decoration:none;}
-a:hover{ text-decoration: none; }
+a:hover{ text-decoration:none; }
 
 .wrap{
   max-width: var(--max);
@@ -47,10 +45,13 @@ a:hover{ text-decoration: none; }
   padding: 44px 22px 64px;
 }
 
+/* =========================
+   Header
+   ========================= */
 .header{
   display:flex;
   gap: 18px;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
   padding: 22px 22px 18px;
   background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
@@ -59,16 +60,14 @@ a:hover{ text-decoration: none; }
   box-shadow: var(--shadow);
 }
 
-.brand{
-  min-width: 0;
-}
+.brand{ min-width: 0; }
 
 .name{
   margin: 0;
-  font-weight: 900;
-  letter-spacing: .08em;
-  font-size: 44px;
-  line-height: 1.05;
+  font-weight: 950;
+  letter-spacing: .09em;
+  font-size: 48px;
+  line-height: 1.02;
 }
 
 .sub{
@@ -79,11 +78,11 @@ a:hover{ text-decoration: none; }
 
 .chips{
   display:flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;             /* (5) one line by default */
   gap: 10px;
-  margin-top: 10px;
+  align-items:center;
+  overflow:hidden;
 }
-
 .chip{
   display:inline-flex;
   align-items:center;
@@ -100,9 +99,10 @@ a:hover{ text-decoration: none; }
 .nav{
   display:flex;
   gap: 10px;
-  align-items: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content:flex-end;
 }
-
 .nav .navbtn{
   display:inline-flex;
   align-items:center;
@@ -116,12 +116,20 @@ a:hover{ text-decoration: none; }
   text-transform: lowercase;
   min-width: 78px;
 }
-
 .nav .navbtn[aria-current="page"]{
   border-color: var(--line2);
-  box-shadow: 0 0 0 3px var(--focus);
+  box-shadow: 0 0 0 3px rgba(121,227,243,.18);
 }
 
+/* Allow wrapping only when screen forces it */
+@media (max-width: 760px){
+  .chips{ flex-wrap: wrap; overflow: visible; }
+  .name{ font-size: 38px; }
+}
+
+/* =========================
+   Sections / Grid
+   ========================= */
 .section{
   margin-top: 16px;
   padding: 18px 18px 16px;
@@ -138,12 +146,10 @@ a:hover{ text-decoration: none; }
   color: var(--muted);
   margin: 0 0 6px;
 }
-
 .h2{
   margin: 0 0 10px;
   font-size: 18px;
 }
-
 .meta{
   margin: 0;
   color: var(--muted);
@@ -155,21 +161,27 @@ a:hover{ text-decoration: none; }
   display:grid;
   grid-template-columns: 1fr 320px;
   gap: 16px;
-  align-items: start;
+  align-items: stretch;          /* (2) ensures left/right align */
 }
-
 @media (max-width: 980px){
   .grid{ grid-template-columns: 1fr; }
-  .nav{ flex-wrap: wrap; justify-content: flex-end; }
-  .name{ font-size: 36px; }
 }
 
+.hr{
+  height: 1px;
+  background: var(--line);
+  margin: 14px 0;
+}
+
+/* =========================
+   Tiles (standardized sizing)
+   ========================= */
 .tiles{
   display:grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 12px;
+  align-items: stretch;          /* (1)(3) consistent tile height behavior */
 }
-
 @media (max-width: 820px){
   .tiles{ grid-template-columns: 1fr; }
 }
@@ -180,21 +192,22 @@ a:hover{ text-decoration: none; }
   border-radius: 16px;
   border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.18));
-  transition: transform .12s ease, border-color .12s ease, background .12s ease;
-  display:block;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
+  display:flex;                  /* standardize internal layout */
+  flex-direction: column;
+  min-height: 168px;             /* (1) standard tile size */
 }
 
 .tile:hover{
   transform: translateY(-1px);
   border-color: var(--line2);
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.22));
+  background: linear-gradient(180deg, var(--tileHover), rgba(0,0,0,.24)); /* (4) higher contrast */
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
 }
 
-.tile:focus{
-  outline:none;
-}
+.tile:focus{ outline:none; }
 .tile:focus-visible{
-  box-shadow: 0 0 0 3px var(--focus);
+  box-shadow: 0 0 0 3px rgba(121,227,243,.18), 0 10px 40px rgba(0,0,0,.35);
 }
 
 .tilehead{
@@ -203,19 +216,11 @@ a:hover{ text-decoration: none; }
   justify-content: space-between;
   gap: 12px;
 }
-
 .title{
   margin: 0;
   font-size: 14px;
   line-height: 1.25;
 }
-
-.desc{
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 12px;
-}
-
 .badge{
   font-family: var(--mono);
   font-size: 11px;
@@ -227,45 +232,63 @@ a:hover{ text-decoration: none; }
   white-space: nowrap;
 }
 
-.actions{
-  margin-top: 12px;
-  display:flex;
-  gap: 8px;
-  flex-wrap: wrap;
+.desc{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
 }
 
+.actions{
+  margin-top: auto;              /* (1)(2)(3) buttons align at bottom */
+  padding-top: 12px;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items:center;
+}
+
+/* Standard button size across site */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap: 8px;
-  padding: 8px 10px;
+  padding: 10px 12px;
+  min-height: 36px;
+  min-width: 108px;              /* (1) consistent button sizing */
   border-radius: 999px;
   border: 1px solid var(--line);
   background: rgba(0,0,0,.20);
   color: var(--text);
   font-size: 12px;
 }
+.btn:hover{ border-color: var(--line2); background: rgba(255,255,255,.06); }
 
-.btn:hover{ border-color: var(--line2); }
+.btn.small{
+  min-width: 92px;
+}
 
+/* =========================
+   Side cards
+   ========================= */
 .sidecard{
+  height: 100%;                  /* (2) align to main column */
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.18));
+  display:flex;
+  flex-direction: column;
 }
-
 .sidecard .kicker{ margin-bottom: 8px; }
 
-.quicknav{
+.list{
   display:flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
 }
-
-.qitem{
+.row{
   display:flex;
   align-items:center;
   justify-content: space-between;
@@ -275,69 +298,15 @@ a:hover{ text-decoration: none; }
   border: 1px solid var(--line);
   background: rgba(0,0,0,.16);
 }
+.row:hover{ border-color: var(--line2); background: rgba(255,255,255,.05); }
 
-.qitem:hover{ border-color: var(--line2); }
+.rleft{ display:flex; flex-direction: column; gap: 4px; }
+.rname{ font-size: 12px; }
+.rhint{ font-size: 11px; color: var(--faint); font-family: var(--mono); }
 
-.qleft{
-  display:flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.qname{ font-size: 12px; }
-.qhint{
-  font-size: 11px;
-  color: var(--faint);
-  font-family: var(--mono);
-}
-
-.snapshots{
-  margin-top: 16px;
-  display:grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
-  gap: 12px;
-}
-
-@media (max-width: 980px){
-  .snapshots{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-}
-@media (max-width: 520px){
-  .snapshots{ grid-template-columns: 1fr; }
-}
-
-.metric{
-  padding: 14px;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.20));
-}
-
-.metric .mname{
-  margin: 0 0 8px;
-  font-size: 12px;
-  color: var(--muted);
-  font-family: var(--mono);
-  letter-spacing: .10em;
-  text-transform: uppercase;
-}
-
-.metric .mvalue{
-  margin: 0;
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.metric .mnote{
-  margin: 8px 0 0;
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.hr{
-  height: 1px;
-  background: var(--line);
-  margin: 14px 0;
-}
-
+/* =========================
+   Inline PDF frame
+   ========================= */
 .inlineframe{
   width: 100%;
   height: 860px;
