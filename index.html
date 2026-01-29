@@ -35,11 +35,12 @@
       <div class="section">
         <p class="kicker">Overview</p>
         <h2 class="h2">Business card + portfolio</h2>
-        <p class="meta">Everything important is visible immediately. Files download on tile click where applicable.</p>
+        <p class="meta">Non-file tiles open on click. File tiles download on click. “Open” remains for in-browser viewing.</p>
 
         <div class="hr"></div>
 
         <div class="tiles">
+          <!-- non-file: open on tile click -->
           <a class="tile" href="/portfolio/">
             <div class="tilehead">
               <h3 class="title">Portfolio</h3>
@@ -47,10 +48,11 @@
             </div>
             <p class="desc">Case study + manager playbook + supporting files.</p>
             <div class="actions">
-              <span class="btn">open</span>
+              <span class="btn" aria-hidden="true">open</span>
             </div>
           </a>
 
+          <!-- non-file: open on tile click -->
           <a class="tile" href="/anduril/">
             <div class="tilehead">
               <h3 class="title">Anduril fit</h3>
@@ -58,21 +60,23 @@
             </div>
             <p class="desc">How my operating patterns map to Anduril’s execution model.</p>
             <div class="actions">
-              <span class="btn">open</span>
+              <span class="btn" aria-hidden="true">open</span>
             </div>
           </a>
 
+          <!-- non-file: open on tile click -->
           <a class="tile" href="/resume/">
             <div class="tilehead">
               <h3 class="title">Resume</h3>
               <span class="badge">formatted + ATS</span>
             </div>
-            <p class="desc">Inline viewing plus direct opens. Tile downloads live on /resume.</p>
+            <p class="desc">Inline viewing plus direct opens. Tiles download on the resume page.</p>
             <div class="actions">
-              <span class="btn">open</span>
+              <span class="btn" aria-hidden="true">open</span>
             </div>
           </a>
 
+          <!-- file: download on tile click -->
           <a class="tile" href="/assets/docs/workplace-governance-high-tempo.pdf" download>
             <div class="tilehead">
               <h3 class="title">Governance case study (PDF)</h3>
@@ -100,6 +104,7 @@
 
         <p class="kicker">Primary routes</p>
         <div class="list">
+          <!-- non-file: open on row click -->
           <a class="row" href="/portfolio/">
             <div class="rleft">
               <div class="rname">Portfolio</div>
@@ -107,6 +112,8 @@
             </div>
             <span class="badge">/portfolio</span>
           </a>
+
+          <!-- non-file: open on row click -->
           <a class="row" href="/anduril/">
             <div class="rleft">
               <div class="rname">Anduril</div>
@@ -114,6 +121,8 @@
             </div>
             <span class="badge">/anduril</span>
           </a>
+
+          <!-- non-file: open on row click -->
           <a class="row" href="/resume/">
             <div class="rleft">
               <div class="rname">Resume</div>
