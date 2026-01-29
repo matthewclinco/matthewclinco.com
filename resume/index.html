@@ -33,8 +33,8 @@
     <section class="grid">
       <div class="section">
         <p class="kicker">Resume</p>
-        <h2 class="h2">Formatted + ATS versions</h2>
-        <p class="meta">Tile click downloads. Inline view is available below.</p>
+        <h2 class="h2">Formatted + ATS (download-on-click)</h2>
+        <p class="meta">Clicking a tile downloads immediately. Use “open” for in-browser viewing.</p>
 
         <div class="hr"></div>
 
@@ -46,8 +46,8 @@
             </div>
             <p class="desc">Human-readable version for hiring teams.</p>
             <div class="actions">
-              <span class="btn">download</span>
               <a class="btn" href="#formatted-inline">inline</a>
+              <a class="btn" href="/assets/docs/resume.pdf" target="_blank" rel="noreferrer">open</a>
             </div>
           </a>
 
@@ -58,8 +58,8 @@
             </div>
             <p class="desc">Parsing-friendly version for ATS ingestion.</p>
             <div class="actions">
-              <span class="btn">download</span>
               <a class="btn" href="#ats-inline">inline</a>
+              <a class="btn" href="/assets/docs/ats-resume.pdf" target="_blank" rel="noreferrer">open</a>
             </div>
           </a>
         </div>
@@ -67,12 +67,12 @@
         <div class="hr"></div>
 
         <p class="kicker" id="formatted-inline">Formatted (inline)</p>
-        <iframe class="inlineframe" src="/assets/docs/resume.pdf"></iframe>
+        <iframe class="inlineframe" src="/assets/docs/resume.pdf" title="Formatted resume"></iframe>
 
         <div class="hr"></div>
 
         <p class="kicker" id="ats-inline">ATS (inline)</p>
-        <iframe class="inlineframe" src="/assets/docs/ats-resume.pdf"></iframe>
+        <iframe class="inlineframe" src="/assets/docs/ats-resume.pdf" title="ATS resume"></iframe>
 
         <p class="footer">Last updated: 2026-01-29</p>
       </div>
@@ -80,10 +80,10 @@
       <aside class="sidecard">
         <p class="kicker">Notes</p>
         <p class="meta">
-          If inline viewing fails in your browser, use the download tiles above.
+          If inline viewing fails in your browser, use “open” or click the tile to download.
         </p>
         <div class="hr"></div>
-        <p class="small">All files served from <span class="badge">/assets/docs/</span>.</p>
+        <p class="small">Files served from <span class="badge">/assets/docs/</span>.</p>
       </aside>
     </section>
 
