@@ -14,100 +14,182 @@
 <body>
   <div class="wrap">
 
-    <!-- Header -->
+    <!-- Top frame -->
     <header class="top">
-      <h1>Anduril</h1>
-      <p class="subtitle">
-        Why my background maps directly to Anduril’s operating model.
-      </p>
+      <div>
+        <h1 class="h1">Anduril</h1>
+        <p class="sub">Why my background maps directly to Anduril’s operating model.</p>
+      </div>
 
-      <nav class="nav">
-        <a href="/">home</a>
-        <a href="/portfolio/">portfolio</a>
-        <a href="/resume/">resume</a>
+      <nav class="nav" aria-label="Site navigation">
+        <a class="btn" href="/">home</a>
+        <a class="btn" href="/portfolio/">portfolio</a>
+        <a class="btn" href="/resume/">resume</a>
       </nav>
     </header>
 
-    <!-- Thesis -->
-    <section class="panel">
-      <h2>Operating thesis</h2>
-      <p>
-        Anduril optimizes for speed, ownership, and execution under real constraints.
-        My work has lived in the same failure modes: high-tempo environments,
-        thin margins for error, regulatory and safety constraints, and teams that
-        cannot afford operational drag.
-      </p>
-      <p>
-        Different domain. Same problems. Same solutions.
-      </p>
+    <section class="grid">
+
+      <!-- Left column: primary content -->
+      <div class="panel">
+        <h2>Fit summary</h2>
+
+        <div class="tiles">
+
+          <!-- Thesis tile (same copy) -->
+          <article class="tile">
+            <div class="tile-head">
+              <h3 class="tile-title">Operating thesis</h3>
+              <span class="tag">thesis</span>
+            </div>
+
+            <p class="desc">
+              Anduril optimizes for speed, ownership, and execution under real constraints.
+              My work has lived in the same failure modes: high-tempo environments,
+              thin margins for error, regulatory and safety constraints, and teams that
+              cannot afford operational drag.
+            </p>
+            <p class="desc">Different domain. Same problems. Same solutions.</p>
+
+            <div class="meta">
+              This page is a role-specific lens; the portfolio contains the full artifacts.
+            </div>
+          </article>
+
+          <!-- What I do tile (same copy) -->
+          <article class="tile">
+            <div class="tile-head">
+              <h3 class="tile-title">What I actually do</h3>
+              <span class="tag">execution</span>
+            </div>
+
+            <ul class="desc" style="margin:0; padding-left:18px;">
+              <li>Build control systems that scale without slowing execution</li>
+              <li>Standardize operations across multi-site, inspection-driven environments</li>
+              <li>Convert policy into tools teams can execute under pressure</li>
+              <li>Reduce variance, ambiguity, and single-point-of-failure dependencies</li>
+              <li>Design governance that enables speed instead of fighting it</li>
+            </ul>
+
+            <div class="meta">
+              Output is almost always an artifact: cadence, rules, owners, and enforcement mechanics.
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Right column: quick actions -->
+      <aside class="side" aria-label="Quick actions">
+        <div class="side-card">
+          <h3>Primary artifacts</h3>
+          <div class="meta">
+            Open the governance case study first if you only have two minutes.
+          </div>
+          <div class="actions" style="margin-top:10px;">
+            <a class="link" href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noopener">Governance PDF ↗</a>
+            <a class="link secondary" href="/assets/docs/workplace-governance-high-tempo.pdf" download>Download</a>
+          </div>
+          <div class="actions">
+            <a class="link" href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noopener">Playbook PDF ↗</a>
+            <a class="link secondary" href="/assets/docs/manager-playbook-2015-2024.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="side-card">
+          <h3>Resumes</h3>
+          <div class="actions" style="margin-top:10px;">
+            <a class="link" href="/assets/docs/resume.pdf" target="_blank" rel="noopener">Formatted ↗</a>
+            <a class="link secondary" href="/assets/docs/resume.pdf" download>Download</a>
+          </div>
+          <div class="actions">
+            <a class="link" href="/assets/docs/ats-resume.pdf" target="_blank" rel="noopener">ATS ↗</a>
+            <a class="link secondary" href="/assets/docs/ats-resume.pdf" download>Download</a>
+          </div>
+        </div>
+      </aside>
+
     </section>
 
-    <!-- What I Do -->
-    <section class="panel">
-      <h2>What I actually do</h2>
-      <ul class="list">
-        <li>Build control systems that scale without slowing execution</li>
-        <li>Standardize operations across multi-site, inspection-driven environments</li>
-        <li>Convert policy into tools teams can execute under pressure</li>
-        <li>Reduce variance, ambiguity, and single-point-of-failure dependencies</li>
-        <li>Design governance that enables speed instead of fighting it</li>
-      </ul>
-    </section>
-
-    <!-- Proof -->
-    <section class="panel">
+    <!-- Proof blocks (same copy, now tiles) -->
+    <section class="panel" style="margin-top:16px;">
       <h2>Relevant work products</h2>
 
-      <div class="artifact">
-        <div>
-          <strong>Workplace Governance for High-Tempo Operations</strong>
-          <span class="tag">Case study</span>
-        </div>
-        <p>
-          A governance layer designed to support fast execution while maintaining
-          compliance, auditability, and accountability under load.
-        </p>
-        <a href="/assets/docs/workplace-governance-high-tempo.pdf">View PDF</a>
-      </div>
+      <div class="tiles">
 
-      <div class="artifact">
-        <div>
-          <strong>Manager Playbook (2015–2024)</strong>
-          <span class="tag">Historical example</span>
-        </div>
-        <p>
-          A practical operating manual translating policy, labor rules, and safety
-          requirements into decision-ready guidance for frontline leaders.
-        </p>
-        <a href="/assets/docs/manager-playbook-2015-2024.pdf">View PDF</a>
+        <article class="tile">
+          <div class="tile-head">
+            <h3 class="tile-title">Workplace Governance for High-Tempo Operations</h3>
+            <span class="tag">case study</span>
+          </div>
+
+          <p class="desc">
+            A governance layer designed to support fast execution while maintaining
+            compliance, auditability, and accountability under load.
+          </p>
+
+          <div class="actions">
+            <a class="link" href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+            <a class="link secondary" href="/assets/docs/workplace-governance-high-tempo.pdf" download>Download</a>
+          </div>
+        </article>
+
+        <article class="tile">
+          <div class="tile-head">
+            <h3 class="tile-title">Manager Playbook (2015–2024)</h3>
+            <span class="tag">historical</span>
+          </div>
+
+          <p class="desc">
+            A practical operating manual translating policy, labor rules, and safety
+            requirements into decision-ready guidance for frontline leaders.
+          </p>
+
+          <div class="actions">
+            <a class="link" href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+            <a class="link secondary" href="/assets/docs/manager-playbook-2015-2024.pdf" download>Download</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- Constraints -->
-    <section class="panel">
-      <h2>How I operate under constraint</h2>
-      <ul class="list">
-        <li>Systems over heroics</li>
-        <li>Clear ownership and escalation paths</li>
-        <li>Bias toward reversible decisions</li>
-        <li>Documentation as an execution tool, not a compliance artifact</li>
-        <li>Reliability as a prerequisite for speed</li>
-      </ul>
-    </section>
+    <!-- Operating constraints + CTA (same copy, now structured) -->
+    <section class="grid">
 
-    <!-- CTA -->
-    <section class="panel callout">
-      <h2>Next step</h2>
-      <p>
-        If this maps to what you need, the fastest way to evaluate fit is through
-        concrete work.
-      </p>
-      <p>
-        <a href="/portfolio/">Review portfolio</a> or
-        <a href="/resume/">view résumé</a>.
-      </p>
+      <div class="panel">
+        <h2>How I operate under constraint</h2>
+        <div class="tile">
+          <div class="tile-head">
+            <h3 class="tile-title">Operating principles</h3>
+            <span class="tag">style</span>
+          </div>
+
+          <ul class="desc" style="margin:0; padding-left:18px;">
+            <li>Systems over heroics</li>
+            <li>Clear ownership and escalation paths</li>
+            <li>Bias toward reversible decisions</li>
+            <li>Documentation as an execution tool, not a compliance artifact</li>
+            <li>Reliability as a prerequisite for speed</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="side">
+        <div class="side-card">
+          <h3>Next step</h3>
+          <p class="desc" style="margin:0;">
+            If this maps to what you need, the fastest way to evaluate fit is through concrete work.
+          </p>
+          <p class="desc" style="margin:10px 0 0;">
+            <a href="/portfolio/">Review portfolio</a> or <a href="/resume/">view résumé</a>.
+          </p>
+        </div>
+      </aside>
+
     </section>
 
   </div>
 </body>
 </html>
+
