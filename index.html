@@ -4,36 +4,75 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Matthew Clinco</title>
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="description" content="Matthew Clinco — Workplace Ops, Controls & Compliance, Vendor Performance & Capex." />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
-  <main class="wrap">
-    <header class="block">
-      <h1>Matthew Clinco</h1>
-      <p class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</p>
-      <p class="meta">Los Angeles, CA | (626) 375-3322 | <a href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a></p>
-      <p class="meta"><a href="https://linkedin.com/in/MatthewClinco">linkedin.com/in/MatthewClinco</a></p>
-    </header>
+  <div class="wrap">
+    <section class="top">
+      <div>
+        <h1 class="h1">Matthew Clinco</h1>
+        <p class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</p>
 
-    <section class="block">
-      <h2>Portfolio Linked Files</h2>
-      <ol>
-        <li><a href="/assets/docs/Resume.pdf">Resume (PDF)</a></li>
-        <li><a href="/assets/docs/ATSResume.pdf">ATS Resume (PDF)</a></li>
-        <li><a href="/assets/docs/Manager_Playbook_2015-2024_Historical_Example.pdf">Manager_Playbook_2015-2024_Historical Example (PDF)</a></li>
-        <li><a href="/assets/docs/Workplace_Governance_for_High-Tempo_Operations.pdf">Workplace_Governance_for_High-Tempo_Operations (PDF)</a></li>
-        <li><a href="/assets/docs/Excel_Fact_Sheet_Sample.xlsx">Excel FACT SHEET Sample from before SAAS (XLSX)</a></li>
-      </ol>
+        <div class="meta">
+          <span class="pill">Los Angeles, CA</span>
+          <a class="pill" href="tel:+16263753322">(626) 375-3322</a>
+          <a class="pill" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
+          <a class="pill" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco</a>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="btn" href="/resume/">/resume</a>
+        <a class="btn" href="/portfolio/">/portfolio</a>
+        <a class="btn" href="/anduril/">/anduril</a>
+      </nav>
     </section>
 
-    <section class="block">
-      <h2>Pages</h2>
-      <ul>
-        <li><a href="/resume/">matthewclinco.com/resume</a></li>
-        <li><a href="/portfolio/">matthewclinco.com/portfolio</a></li>
-        <li><a href="/anduril/">matthewclinco.com/anduril</a></li>
-      </ul>
+    <section class="grid">
+      <div class="card">
+        <h2>Portfolio Linked Files</h2>
+        <p class="kicker">Direct downloads (served from /assets/docs/).</p>
+        <ul class="list">
+          <li class="item">
+            <a href="/assets/docs/resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+            <small>resume.pdf</small>
+          </li>
+          <li class="item">
+            <a href="/assets/docs/ats-resume.pdf" target="_blank" rel="noreferrer">ATS Resume (PDF)</a>
+            <small>ats-resume.pdf</small>
+          </li>
+          <li class="item">
+            <a href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noreferrer">Manager Playbook 2015–2024 (PDF)</a>
+            <small>manager-playbook-2015-2024.pdf</small>
+          </li>
+          <li class="item">
+            <a href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noreferrer">Workplace Governance for High-Tempo Operations (PDF)</a>
+            <small>workplace-governance-high-tempo.pdf</small>
+          </li>
+          <li class="item">
+            <span>Excel FACT SHEET Sample (XLSX)</span>
+            <small>add later</small>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Pages</h2>
+        <p class="kicker">Short links that stay stable.</p>
+        <ul class="list">
+          <li class="item"><a href="/resume/">matthewclinco.com/resume</a><small>Resume page</small></li>
+          <li class="item"><a href="/portfolio/">matthewclinco.com/portfolio</a><small>Portfolio index</small></li>
+          <li class="item"><a href="/anduril/">matthewclinco.com/anduril</a><small>Anduril-focused view</small></li>
+        </ul>
+
+        <div class="footer">Last updated: <span id="d"></span></div>
+      </div>
     </section>
-  </main>
+  </div>
+
+  <script>
+    document.getElementById("d").textContent = new Date().toISOString().slice(0,10);
+  </script>
 </body>
 </html>
