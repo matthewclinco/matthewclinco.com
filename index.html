@@ -1,42 +1,10 @@
 <!doctype html>
-<header class="top">
-  <div class="brand">
-    <div class="wordmark">MATTHEW CLINCO</div>
-    <div class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</div>
-
-    <div class="chips">
-      <span class="chip">Los Angeles, CA</span>
-      <a class="chip" href="tel:+16263753322">(626) 375-3322</a>
-      <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
-      <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noopener noreferrer">
-        linkedin.com/in/MatthewClinco
-      </a>
-    </div>
-  </div>
-
-  <nav class="nav">
-    <a class="btn" href="/">home</a>
-    <a class="btn" href="/portfolio/">portfolio</a>
-    <a class="btn" href="/anduril/">anduril</a>
-    <a class="btn" href="/resume/">resume</a>
-  </nav>
-</header>
-
-
-  <nav class="nav">
-    <a class="btn" href="/">home</a>
-    <a class="btn" href="/portfolio/">portfolio</a>
-    <a class="btn" href="/anduril/">anduril</a>
-    <a class="btn" href="/resume/">resume</a>
-  </nav>
-</header>
-
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Matthew Clinco</title>
-
+  <meta name="description" content="Matthew Clinco — Workplace Ops | Controls & Compliance | Vendor Performance & Capex" />
   <link rel="canonical" href="https://www.matthewclinco.com/" />
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
@@ -44,22 +12,34 @@
 <body>
   <div class="wrap">
     <header class="top">
-      <div>
-        <h1 class="h1">Matthew Clinco</h1>
-        <p class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</p>
+      <div class="brand">
+        <div class="wordmark">MATTHEW CLINCO</div>
+        <div class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</div>
+
+        <div class="chips">
+          <span class="chip">Los Angeles, CA</span>
+          <a class="chip" href="tel:+16263753322">(626) 375-3322</a>
+          <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
+          <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/MatthewClinco
+          </a>
+        </div>
       </div>
+
       <nav class="nav">
+        <a class="btn active" href="/">home</a>
         <a class="btn" href="/portfolio/">portfolio</a>
         <a class="btn" href="/anduril/">anduril</a>
         <a class="btn" href="/resume/">resume</a>
       </nav>
     </header>
 
-    <section class="grid">
-      <div class="panel">
+    <main class="grid">
+      <section class="panel">
         <h2>What this site contains</h2>
+
         <div class="tiles">
-          <div class="tile">
+          <article class="tile">
             <div class="tile-head">
               <h3 class="tile-title">Operational governance</h3>
               <span class="tag">case study</span>
@@ -67,10 +47,11 @@
             <p class="desc">Control systems designed for speed without loss of compliance.</p>
             <div class="actions">
               <a class="link" href="/portfolio/#governance">view</a>
+              <a class="link" href="/assets/docs/workplace-governance-high-tempo.pdf">pdf</a>
             </div>
-          </div>
+          </article>
 
-          <div class="tile">
+          <article class="tile">
             <div class="tile-head">
               <h3 class="tile-title">Anduril fit</h3>
               <span class="tag">role mapping</span>
@@ -79,21 +60,47 @@
             <div class="actions">
               <a class="link" href="/anduril/">view</a>
             </div>
-          </div>
+          </article>
+
+          <article class="tile">
+            <div class="tile-head">
+              <h3 class="tile-title">Resume</h3>
+              <span class="tag">formatted + ATS</span>
+            </div>
+            <p class="desc">Direct downloads and an inline view.</p>
+            <div class="actions">
+              <a class="link" href="/resume/">view</a>
+              <a class="link" href="/assets/docs/resume.pdf">pdf</a>
+              <a class="link" href="/assets/docs/ats-resume.pdf">ats</a>
+            </div>
+          </article>
         </div>
-      </div>
+      </section>
 
       <aside class="side">
         <div class="side-card">
-          <h3>Contact</h3>
-          <p class="meta">
-            Los Angeles, CA<br>
-            <a href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a><br>
-            <a href="https://linkedin.com/in/MatthewClinco" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-          </p>
+          <h3>Quick links</h3>
+          <div class="list">
+            <a class="row" href="/assets/docs/resume.pdf">
+              <span>Resume (PDF)</span><span class="muted">resume.pdf</span>
+            </a>
+            <a class="row" href="/assets/docs/ats-resume.pdf">
+              <span>ATS Resume (PDF)</span><span class="muted">ats-resume.pdf</span>
+            </a>
+            <a class="row" href="/portfolio/">
+              <span>Portfolio index</span><span class="muted">/portfolio/</span>
+            </a>
+            <a class="row" href="/anduril/">
+              <span>Anduril</span><span class="muted">/anduril/</span>
+            </a>
+          </div>
         </div>
       </aside>
-    </section>
+    </main>
+
+    <footer class="foot">
+      <span class="muted">Last updated: 2026-01-29</span>
+    </footer>
   </div>
 </body>
 </html>
