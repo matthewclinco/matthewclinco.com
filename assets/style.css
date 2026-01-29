@@ -1,5 +1,39 @@
 /* ===== Global design system | MatthewClinco.com ===== */
 
+.wordmark{
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: clamp(28px, 3.2vw, 44px);
+  line-height: 1.05;
+}
+
+.brand .sub{
+  margin-top: 10px;
+  opacity: .85;
+}
+
+.chips{
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}
+
+
 html { scroll-behavior: smooth; }
 :target { scroll-margin-top: 96px; }
 
