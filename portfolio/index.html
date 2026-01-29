@@ -1,168 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | Matthew Clinco</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://www.matthewclinco.com/portfolio/">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="description" content="Selected work products and historical examples for Matthew Clinco." />
+  <link rel="canonical" href="https://www.matthewclinco.com/portfolio/" />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
 
 <body>
-<div class="wrap">
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <div class="wordmark">MATTHEW CLINCO</div>
+        <div class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</div>
 
-  <!-- SITE HEADER / BUSINESS CARD -->
-  <header class="top">
-    <div class="brand">
-      <div class="wordmark">MATTHEW CLINCO</div>
-      <div class="sub">
-        Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex
+        <div class="chips">
+          <span class="chip">Los Angeles, CA</span>
+          <a class="chip" href="tel:+16263753322">(626) 375-3322</a>
+          <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
+          <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/MatthewClinco
+          </a>
+        </div>
       </div>
-      <div class="chips">
-        <span class="chip">Los Angeles, CA</span>
-        <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
-        <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noopener noreferrer">
-          linkedin.com/in/MatthewClinco
-        </a>
-      </div>
-    </div>
 
-    <nav class="nav">
-      <a class="btn" href="/">home</a>
-      <a class="btn active" href="/portfolio/">portfolio</a>
-      <a class="btn" href="/anduril/">anduril</a>
-      <a class="btn" href="/resume/">resume</a>
-    </nav>
-  </header>
+      <nav class="nav">
+        <a class="btn" href="/">home</a>
+        <a class="btn active" href="/portfolio/">portfolio</a>
+        <a class="btn" href="/anduril/">anduril</a>
+        <a class="btn" href="/resume/">resume</a>
+      </nav>
+    </header>
 
-  <!-- PAGE GRID -->
-  <section class="grid">
-
-    <!-- MAIN CONTENT -->
-    <main class="main">
-
-      <!-- PAGE INTRO -->
+    <main class="grid">
       <section class="panel">
-        <h1 class="page-title">Portfolio</h1>
-        <p class="lede">
-          Selected work products and historical examples.  
-          Everything below is directly reviewable without additional navigation.
-        </p>
-      </section>
-
-      <!-- IMPACT SNAPSHOT -->
-      <section class="panel" id="impact">
-        <h2>Impact snapshot</h2>
-
-        <div class="tiles tiles-4">
-          <div class="tile">
-            <h3 class="tile-title">Execution throughput</h3>
-            <p class="metric">
-              Response latency reduced from ~48h to ~24h
-            </p>
-            <p class="meta">
-              Across a 9-property portfolio (2022–2024)
-            </p>
-          </div>
-
-          <div class="tile">
-            <h3 class="tile-title">Governance reliability</h3>
-            <p class="metric">
-              ~20% reduction in urgent / after-hours incidents
-            </p>
-            <p class="meta">
-              Post-standardization baseline vs prior 12 months
-            </p>
-          </div>
-
-          <div class="tile">
-            <h3 class="tile-title">Decision velocity</h3>
-            <p class="metric">
-              Proposal cycle time shortened by ~5 days
-            </p>
-            <p class="meta">
-              Leadership review → approval window
-            </p>
-          </div>
-
-          <div class="tile">
-            <h3 class="tile-title">Failure modes I design against</h3>
-            <ul class="list">
-              <li>Hero-dependent execution</li>
-              <li>Compliance drift under load</li>
-              <li>Unowned cross-system handoffs</li>
-              <li>Latency hidden by manual workarounds</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- GOVERNANCE CASE STUDY -->
-      <section class="panel" id="governance">
-        <div class="panel-head">
-          <h2>Workplace governance for high-tempo operations</h2>
-          <span class="tag">case study</span>
-        </div>
-
-        <p>
-          A governance system designed to preserve speed while enforcing
-          compliance as a baseline constraint. Focused on ownership clarity,
-          auditability, and operational continuity under load.
-        </p>
-
-        <div class="actions">
-          <a class="btn secondary" href="/assets/docs/workplace-governance-high-tempo.pdf">
-            View PDF
-          </a>
-        </div>
-      </section>
-
-      <!-- MANAGER PLAYBOOK -->
-      <section class="panel" id="manager-playbook">
-        <div class="panel-head">
-          <h2>Manager Playbook (2015–2024)</h2>
-          <span class="tag">historical example</span>
-        </div>
-
-        <p>
-          An operational playbook refined over multiple environments.
-          Demonstrates how policy becomes execution under pressure.
-        </p>
-
-        <div class="actions">
-          <a class="btn secondary" href="/assets/docs/manager-playbook-2015-2024.pdf">
-            View PDF
-          </a>
-        </div>
-      </section>
-
-      <!-- DOWNLOADS -->
-      <section class="panel" id="downloads">
-        <h2>Additional artifacts</h2>
+        <h2>Portfolio</h2>
+        <p class="muted">Selected work products and historical examples.</p>
 
         <div class="tiles">
-          <div class="tile">
-            <h3 class="tile-title">Excel FACT SHEET sample</h3>
-            <p class="meta">Pre-SaaS operational control model</p>
-            <span class="tag muted">upload pending</span>
-          </div>
+          <article class="tile" id="governance">
+            <div class="tile-head">
+              <h3 class="tile-title">Workplace Governance for High-Tempo Operations</h3>
+              <span class="tag">case study</span>
+            </div>
+            <p class="desc">
+              Governance layer for high-velocity operations: controls, auditability, manager tooling, and execution cadence.
+            </p>
+            <div class="actions">
+              <a class="link" href="/assets/docs/workplace-governance-high-tempo.pdf">open PDF</a>
+            </div>
+          </article>
+
+          <article class="tile" id="playbook">
+            <div class="tile-head">
+              <h3 class="tile-title">Manager Playbook 2015–2024</h3>
+              <span class="tag">historical example</span>
+            </div>
+            <p class="desc">
+              Operating playbook artifact: hiring, training, labor controls, incident response, and compliance mechanisms.
+            </p>
+            <div class="actions">
+              <a class="link" href="/assets/docs/manager-playbook-2015-2024.pdf">open PDF</a>
+            </div>
+          </article>
+
+          <article class="tile" id="fact-sheet">
+            <div class="tile-head">
+              <h3 class="tile-title">Excel FACT SHEET Sample</h3>
+              <span class="tag">xlsx</span>
+            </div>
+            <p class="desc">
+              Pre-SaaS tracking artifact demonstrating structured reporting and control thinking.
+            </p>
+            <div class="actions">
+              <span class="muted">Upload later</span>
+            </div>
+          </article>
         </div>
       </section>
 
+      <aside class="side">
+        <div class="side-card">
+          <h3>Quick nav</h3>
+          <div class="list">
+            <a class="row" href="#governance"><span>Governance case study</span><span class="muted">jump</span></a>
+            <a class="row" href="#playbook"><span>Manager Playbook</span><span class="muted">jump</span></a>
+            <a class="row" href="#fact-sheet"><span>Excel FACT SHEET</span><span class="muted">jump</span></a>
+          </div>
+          <p class="meta muted" style="margin-top:10px;">
+            Note: quick nav uses in-page anchors. It should not change domains, only jump within this page.
+          </p>
+        </div>
+      </aside>
     </main>
 
-    <!-- QUICK NAV SIDEBAR -->
-    <aside class="side">
-      <nav class="side-card">
-        <h3>On this page</h3>
-        <a href="#impact">Impact snapshot</a>
-        <a href="#governance">Governance case study</a>
-        <a href="#manager-playbook">Manager playbook</a>
-        <a href="#downloads">Artifacts</a>
-      </nav>
-    </aside>
-
-  </section>
-</div>
+    <footer class="foot">
+      <span class="muted">Last updated: 2026-01-29</span>
+    </footer>
+  </div>
 </body>
 </html>
