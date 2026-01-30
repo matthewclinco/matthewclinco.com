@@ -13,78 +13,68 @@
 
     <header class="header">
       <div class="brand">
-        <h1 class="name">MATTHEW CLINCO</h1>
+        <a class="nameLink" href="/" aria-label="Home">
+          <h1 class="name">MATTHEW CLINCO</h1>
+        </a>
         <p class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</p>
         <div class="chips">
           <span class="chip">Los Angeles, CA</span>
           <a class="chip" href="tel:+16263753322">(626) 375-3322</a>
           <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
-          <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco</a>
+          <a class="chip" href="https://www.linkedin.com/in/MatthewClinco/" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco/</a>
         </div>
       </div>
 
+      <!-- (7) Only two buttons on homepage -->
       <nav class="nav" aria-label="Primary">
-        <a class="navbtn" href="/" aria-current="page">home</a>
-        <a class="navbtn" href="/portfolio/">portfolio</a>
-        <a class="navbtn" href="/anduril/">anduril</a>
         <a class="navbtn" href="/resume/">resume</a>
+        <a class="navbtn" href="/portfolio/">portfolio</a>
       </nav>
     </header>
 
+    <!-- (9) First row under header: left main card + right notes card aligned -->
     <section class="grid">
-      <div class="section">
-        <p class="kicker">Overview</p>
-        <h2 class="h2">Business card + portfolio</h2>
-        <p class="meta">Non-file tiles open on click. File tiles download on click. “Open” remains for in-browser viewing.</p>
+      <div class="card">
+        <p class="kicker">About me</p>
+        <h2 class="h2">Operator with durability, speed, and control</h2>
+        <p class="meta">
+          I’ve spent 15 years leading operations across complex portfolios and high-volume environments where the margin for error is low and the cost of drift is real.
+          My work lives at the intersection of execution and controls: keeping teams moving fast while ensuring decisions remain auditable, vendors remain accountable, and
+          financial outcomes are measurable.
+          <br><br>
+          I’m typically brought in when the operation is growing, changing, or under pressure, and the existing way of working no longer scales. The pattern is consistent:
+          clarify ownership, standardize inputs and escalation paths, and build lightweight governance that survives peak load. The goal isn’t paperwork. The goal is a system
+          that produces reliable outcomes without heroics, and gives leadership clean visibility into performance, risk, and priorities.
+          <br><br>
+          I’m known as a trusted advisor to ownership and senior stakeholders because I can translate operational reality into decision-ready plans, and then drive disciplined
+          follow-through with teams and vendors. If you want an operator who produces stability, throughput, and predictable results, that’s the lane I run in.
+        </p>
 
         <div class="hr"></div>
 
+        <!-- (10) Only two tiles: portfolio + resume -->
         <div class="tiles">
-          <!-- non-file: open on tile click -->
           <a class="tile" href="/portfolio/">
             <div class="tilehead">
               <h3 class="title">Portfolio</h3>
               <span class="badge">artifacts</span>
             </div>
-            <p class="desc">Case study + manager playbook + supporting files.</p>
+            <p class="desc">Case study + manager playbook + supporting materials. Everything visible at a glance.</p>
             <div class="actions">
-              <span class="btn" aria-hidden="true">open</span>
+              <span class="openhint">open</span>
+              <span class="openpill">Open <span class="mono">↗</span></span>
             </div>
           </a>
 
-          <!-- non-file: open on tile click -->
-          <a class="tile" href="/anduril/">
-            <div class="tilehead">
-              <h3 class="title">Anduril fit</h3>
-              <span class="badge">role mapping</span>
-            </div>
-            <p class="desc">How my operating patterns map to Anduril’s execution model.</p>
-            <div class="actions">
-              <span class="btn" aria-hidden="true">open</span>
-            </div>
-          </a>
-
-          <!-- non-file: open on tile click -->
           <a class="tile" href="/resume/">
             <div class="tilehead">
               <h3 class="title">Resume</h3>
-              <span class="badge">formatted + ATS</span>
+              <span class="badge">PDFs</span>
             </div>
-            <p class="desc">Inline viewing plus direct opens. Tiles download on the resume page.</p>
+            <p class="desc">Formatted and ATS versions, cleanly presented for quick review.</p>
             <div class="actions">
-              <span class="btn" aria-hidden="true">open</span>
-            </div>
-          </a>
-
-          <!-- file: download on tile click -->
-          <a class="tile" href="/assets/docs/workplace-governance-high-tempo.pdf" download>
-            <div class="tilehead">
-              <h3 class="title">Governance case study (PDF)</h3>
-              <span class="badge">download</span>
-            </div>
-            <p class="desc">Downloads immediately on click.</p>
-            <div class="actions">
-              <a class="btn" href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noreferrer">open</a>
+              <span class="openhint">open</span>
+              <span class="openpill">Open <span class="mono">↗</span></span>
             </div>
           </a>
         </div>
@@ -95,16 +85,16 @@
       <aside class="sidecard">
         <p class="kicker">Contact</p>
         <p class="meta">
-          Los Angeles, CA · <a href="tel:+16263753322">(626) 375-3322</a><br>
+          Los Angeles, CA<br>
+          <a href="tel:+16263753322">(626) 375-3322</a><br>
           <a href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a><br>
-          <a href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/MatthewClinco/" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco/</a>
         </p>
 
         <div class="hr"></div>
 
-        <p class="kicker">Primary routes</p>
+        <p class="kicker">Fast access</p>
         <div class="list">
-          <!-- non-file: open on row click -->
           <a class="row" href="/portfolio/">
             <div class="rleft">
               <div class="rname">Portfolio</div>
@@ -113,24 +103,17 @@
             <span class="badge">/portfolio</span>
           </a>
 
-          <!-- non-file: open on row click -->
-          <a class="row" href="/anduril/">
-            <div class="rleft">
-              <div class="rname">Anduril</div>
-              <div class="rhint">fit</div>
-            </div>
-            <span class="badge">/anduril</span>
-          </a>
-
-          <!-- non-file: open on row click -->
           <a class="row" href="/resume/">
             <div class="rleft">
               <div class="rname">Resume</div>
-              <div class="rhint">inline</div>
+              <div class="rhint">pdfs</div>
             </div>
             <span class="badge">/resume</span>
           </a>
         </div>
+
+        <div class="hr"></div>
+        <p class="small">Note: /anduril/ exists but is intentionally not linked from the public homepage.</p>
       </aside>
     </section>
 
