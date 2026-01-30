@@ -12,39 +12,32 @@
 
     <header class="header">
       <div class="brand">
-        <h1 class="name">MATTHEW CLINCO</h1>
+        <a class="nameLink" href="/" aria-label="Home">
+          <h1 class="name">MATTHEW CLINCO</h1>
+        </a>
         <p class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</p>
         <div class="chips">
           <span class="chip">Los Angeles, CA</span>
           <a class="chip" href="tel:+16263753322">(626) 375-3322</a>
           <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
-          <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco</a>
+          <a class="chip" href="https://www.linkedin.com/in/MatthewClinco/" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco/</a>
         </div>
       </div>
 
+      <!-- intentionally no /anduril link -->
       <nav class="nav" aria-label="Primary">
-        <a class="navbtn" href="/">home</a>
-        <a class="navbtn" href="/portfolio/">portfolio</a>
-        <a class="navbtn" href="/anduril/" aria-current="page">anduril</a>
         <a class="navbtn" href="/resume/">resume</a>
+        <a class="navbtn" href="/portfolio/">portfolio</a>
       </nav>
     </header>
 
-    <section class="section">
-      <p class="kicker">Anduril fit</p>
-      <h2 class="h2">Workplace Operations as an execution multiplier</h2>
-      <p class="meta">
-        I build operating environments where reliability is engineered: governance that scales, vendor ecosystems that stay controlled under load,
-        and compliance that functions as a baseline constraint rather than a slowdown mechanism.
-      </p>
-    </section>
-
     <section class="grid">
-      <div class="section">
-        <p class="kicker">Operating pattern</p>
-        <h2 class="h2">How I run workplace ops</h2>
+      <div class="card">
+        <p class="kicker">Anduril fit</p>
+        <h2 class="h2">Workplace Operations as an execution multiplier</h2>
         <p class="meta">
-          Systems over heroics. Clear owners. Fast escalation paths. Auditable controls. Minimal policy surface area, maximal enforcement consistency.
+          I build operating environments where reliability is engineered: governance that scales, vendor ecosystems that stay controlled under load,
+          and compliance that functions as a baseline constraint rather than a slowdown mechanism.
         </p>
 
         <div class="hr"></div>
@@ -61,7 +54,8 @@
               In inspection-driven environments, compliance is embedded in the workflow: required artifacts, review cadences, and exception handling that survives peak load.
             </p>
             <div class="actions">
-              <a class="btn" href="/portfolio/">supporting artifacts</a>
+              <span class="openhint">reference</span>
+              <span class="openpill">Artifacts <span class="mono">↗</span></span>
             </div>
           </div>
 
@@ -77,7 +71,8 @@
               • Established a recurring compliance review cadence for timekeeping exceptions and investigation closure quality.
             </p>
             <div class="actions">
-              <a class="btn" href="/resume/">see resume context</a>
+              <span class="openhint">reference</span>
+              <span class="openpill">Resume <span class="mono">↗</span></span>
             </div>
           </div>
 
@@ -89,12 +84,12 @@
             <p class="desc">
               This is the workplace-ops version of the Anduril operating pattern: high ownership under ambiguity, systems over heroics,
               and compliance as a baseline constraint. Different domain, same failure modes. The result is an enforceable governance layer
-              that reduces friction for execution teams while containing risk. In a high-tempo environment, the win condition is not “policy”;
-              it is operational throughput that remains reliable, auditable, and resilient under load.
+              that reduces friction for execution teams while containing risk. In a high-tempo environment, the win condition is operational throughput
+              that remains reliable, auditable, and resilient under load.
             </p>
             <div class="actions">
-              <a class="btn" href="/portfolio/">governance case study</a>
-              <a class="btn" href="/resume/">resume</a>
+              <span class="openhint">reference</span>
+              <span class="openpill">Portfolio <span class="mono">↗</span></span>
             </div>
           </div>
         </div>
@@ -105,33 +100,37 @@
       <aside class="sidecard">
         <p class="kicker">Notes</p>
         <p class="meta">
-          If you want “exact deltas with dates/windows” on this page, swap the impact bullets to:
-          “~60 days pre-change vs ~60 days post-stabilization” or a specific quarter range.
+          This page is intentionally unlinked from the public navigation. It exists for company-specific review when shared directly.
         </p>
 
         <div class="hr"></div>
 
-        <p class="kicker">Supporting files</p>
+        <p class="kicker">Supporting links</p>
         <div class="list">
-          <a class="row" href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noreferrer">
+          <a class="row" href="/portfolio/">
             <div class="rleft">
-              <div class="rname">Governance case study</div>
-              <div class="rhint">PDF</div>
+              <div class="rname">Portfolio page</div>
+              <div class="rhint">artifacts</div>
             </div>
-            <span class="badge">open</span>
+            <span class="badge">/portfolio</span>
           </a>
 
-          <a class="row" href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noreferrer">
+          <a class="row" href="/resume/">
             <div class="rleft">
-              <div class="rname">Manager playbook</div>
-              <div class="rhint">PDF</div>
+              <div class="rname">Resume page</div>
+              <div class="rhint">pdfs</div>
+            </div>
+            <span class="badge">/resume</span>
+          </a>
+
+          <a class="row" href="https://www.linkedin.com/in/MatthewClinco/" target="_blank" rel="noreferrer">
+            <div class="rleft">
+              <div class="rname">LinkedIn</div>
+              <div class="rhint">linkedin.com/in/MatthewClinco/</div>
             </div>
             <span class="badge">open</span>
           </a>
         </div>
-
-        <div class="hr"></div>
-        <p class="small">This sidebar is height-aligned to the main column.</p>
       </aside>
     </section>
 
