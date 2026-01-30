@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resume | Matthew Clinco</title>
-  <link rel="canonical" href="https://www.matthewclinco.com/resume/" />
+  <title>Matthew Clinco</title>
+  <meta name="description" content="Matthew Clinco — Workplace Ops | Controls & Compliance | Vendor Performance & Capex" />
+  <link rel="canonical" href="https://www.matthewclinco.com/" />
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
@@ -12,78 +13,107 @@
 
     <header class="header">
       <div class="brand">
-        <h1 class="name">MATTHEW CLINCO</h1>
+        <a class="nameLink" href="/" aria-label="Home">
+          <h1 class="name">MATTHEW CLINCO</h1>
+        </a>
         <p class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</p>
         <div class="chips">
           <span class="chip">Los Angeles, CA</span>
           <a class="chip" href="tel:+16263753322">(626) 375-3322</a>
           <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
-          <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco</a>
+          <a class="chip" href="https://www.linkedin.com/in/MatthewClinco/" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco/</a>
         </div>
       </div>
 
+      <!-- (7) Only two buttons on homepage -->
       <nav class="nav" aria-label="Primary">
-        <a class="navbtn" href="/">home</a>
+        <a class="navbtn" href="/resume/">resume</a>
         <a class="navbtn" href="/portfolio/">portfolio</a>
-        <a class="navbtn" href="/anduril/">anduril</a>
-        <a class="navbtn" href="/resume/" aria-current="page">resume</a>
       </nav>
     </header>
 
+    <!-- (9) First row under header: left main card + right notes card aligned -->
     <section class="grid">
-      <div class="section">
-        <p class="kicker">Resume</p>
-        <h2 class="h2">Formatted + ATS (download-on-click)</h2>
-        <p class="meta">Clicking a tile downloads immediately. Use “open” for in-browser viewing.</p>
+      <div class="card">
+        <p class="kicker">About me</p>
+        <h2 class="h2">Operator with durability, speed, and control</h2>
+        <p class="meta">
+          I’ve spent 15 years leading operations across complex portfolios and high-volume environments where the margin for error is low and the cost of drift is real.
+          My work lives at the intersection of execution and controls: keeping teams moving fast while ensuring decisions remain auditable, vendors remain accountable, and
+          financial outcomes are measurable.
+          <br><br>
+          I’m typically brought in when the operation is growing, changing, or under pressure, and the existing way of working no longer scales. The pattern is consistent:
+          clarify ownership, standardize inputs and escalation paths, and build lightweight governance that survives peak load. The goal isn’t paperwork. The goal is a system
+          that produces reliable outcomes without heroics, and gives leadership clean visibility into performance, risk, and priorities.
+          <br><br>
+          I’m known as a trusted advisor to ownership and senior stakeholders because I can translate operational reality into decision-ready plans, and then drive disciplined
+          follow-through with teams and vendors. If you want an operator who produces stability, throughput, and predictable results, that’s the lane I run in.
+        </p>
 
         <div class="hr"></div>
 
+        <!-- (10) Only two tiles: portfolio + resume -->
         <div class="tiles">
-          <a class="tile" href="/assets/docs/resume.pdf" download>
+          <a class="tile" href="/portfolio/">
             <div class="tilehead">
-              <h3 class="title">Formatted resume</h3>
-              <span class="badge">PDF</span>
+              <h3 class="title">Portfolio</h3>
+              <span class="badge">artifacts</span>
             </div>
-            <p class="desc">Human-readable version for hiring teams.</p>
+            <p class="desc">Case study + manager playbook + supporting materials. Everything visible at a glance.</p>
             <div class="actions">
-              <a class="btn" href="#formatted-inline">inline</a>
-              <a class="btn" href="/assets/docs/resume.pdf" target="_blank" rel="noreferrer">open</a>
+              <span class="openhint">open</span>
+              <span class="openpill">Open <span class="mono">↗</span></span>
             </div>
           </a>
 
-          <a class="tile" href="/assets/docs/ats-resume.pdf" download>
+          <a class="tile" href="/resume/">
             <div class="tilehead">
-              <h3 class="title">ATS resume</h3>
-              <span class="badge">PDF</span>
+              <h3 class="title">Resume</h3>
+              <span class="badge">PDFs</span>
             </div>
-            <p class="desc">Parsing-friendly version for ATS ingestion.</p>
+            <p class="desc">Formatted and ATS versions, cleanly presented for quick review.</p>
             <div class="actions">
-              <a class="btn" href="#ats-inline">inline</a>
-              <a class="btn" href="/assets/docs/ats-resume.pdf" target="_blank" rel="noreferrer">open</a>
+              <span class="openhint">open</span>
+              <span class="openpill">Open <span class="mono">↗</span></span>
             </div>
           </a>
         </div>
-
-        <div class="hr"></div>
-
-        <p class="kicker" id="formatted-inline">Formatted (inline)</p>
-        <iframe class="inlineframe" src="/assets/docs/resume.pdf" title="Formatted resume"></iframe>
-
-        <div class="hr"></div>
-
-        <p class="kicker" id="ats-inline">ATS (inline)</p>
-        <iframe class="inlineframe" src="/assets/docs/ats-resume.pdf" title="ATS resume"></iframe>
 
         <p class="footer">Last updated: 2026-01-29</p>
       </div>
 
       <aside class="sidecard">
-        <p class="kicker">Notes</p>
+        <p class="kicker">Contact</p>
         <p class="meta">
-          If inline viewing fails in your browser, use “open” or click the tile to download.
+          Los Angeles, CA<br>
+          <a href="tel:+16263753322">(626) 375-3322</a><br>
+          <a href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a><br>
+          <a href="https://www.linkedin.com/in/MatthewClinco/" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco/</a>
         </p>
+
         <div class="hr"></div>
-        <p class="small">Files served from <span class="badge">/assets/docs/</span>.</p>
+
+        <p class="kicker">Fast access</p>
+        <div class="list">
+          <a class="row" href="/portfolio/">
+            <div class="rleft">
+              <div class="rname">Portfolio</div>
+              <div class="rhint">artifacts</div>
+            </div>
+            <span class="badge">/portfolio</span>
+          </a>
+
+          <a class="row" href="/resume/">
+            <div class="rleft">
+              <div class="rname">Resume</div>
+              <div class="rhint">pdfs</div>
+            </div>
+            <span class="badge">/resume</span>
+          </a>
+        </div>
+
+        <div class="hr"></div>
+        <p class="small">Note: /anduril/ exists but is intentionally not linked from the public homepage.</p>
       </aside>
     </section>
 
