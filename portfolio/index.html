@@ -12,80 +12,54 @@
 
     <header class="header">
       <div class="brand">
-        <h1 class="name">MATTHEW CLINCO</h1>
+        <a class="nameLink" href="/" aria-label="Home">
+          <h1 class="name">MATTHEW CLINCO</h1>
+        </a>
         <p class="sub">Workplace Ops | Controls &amp; Compliance | Vendor Performance &amp; Capex</p>
         <div class="chips">
           <span class="chip">Los Angeles, CA</span>
           <a class="chip" href="tel:+16263753322">(626) 375-3322</a>
           <a class="chip" href="mailto:matt@matthewclinco.com">matt@matthewclinco.com</a>
-          <a class="chip" href="https://linkedin.com/in/MatthewClinco" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco</a>
+          <a class="chip" href="https://www.linkedin.com/in/MatthewClinco/" target="_blank" rel="noreferrer">linkedin.com/in/MatthewClinco/</a>
         </div>
       </div>
 
       <nav class="nav" aria-label="Primary">
-        <a class="navbtn" href="/">home</a>
-        <a class="navbtn" href="/portfolio/" aria-current="page">portfolio</a>
-        <a class="navbtn" href="/anduril/">anduril</a>
         <a class="navbtn" href="/resume/">resume</a>
+        <a class="navbtn" href="/portfolio/" aria-current="page">portfolio</a>
       </nav>
     </header>
 
     <section class="grid">
-      <div class="section">
+      <div class="card">
         <p class="kicker">Portfolio</p>
-        <h2 class="h2">Artifacts (download-on-click)</h2>
-        <p class="meta">File tiles download immediately when clicked. Use “open” for in-browser viewing.</p>
+        <h2 class="h2">Artifacts</h2>
+        <p class="meta">Click a tile to open the artifact (new tab).</p>
 
         <div class="hr"></div>
 
         <div class="tiles">
-          <!-- file: download on tile click -->
-          <a class="tile" href="/assets/docs/workplace-governance-high-tempo.pdf" download>
+          <a class="tile" href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noreferrer">
             <div class="tilehead">
               <h3 class="title">Workplace Governance for High-Tempo Operations</h3>
               <span class="badge">case study • PDF</span>
             </div>
-            <p class="desc">Controls + governance designed to preserve execution speed while containing compliance risk.</p>
+            <p class="desc">Governance layer designed for speed without compliance drift. Controls, cadence, owners, and auditability.</p>
             <div class="actions">
-              <a class="btn" href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noreferrer">open</a>
+              <span class="openhint">open</span>
+              <span class="openpill">Open <span class="mono">↗</span></span>
             </div>
           </a>
 
-          <!-- file: download on tile click -->
-          <a class="tile" href="/assets/docs/manager-playbook-2015-2024.pdf" download>
+          <a class="tile" href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noreferrer">
             <div class="tilehead">
               <h3 class="title">Manager Playbook (2015–2024)</h3>
               <span class="badge">historical • PDF</span>
             </div>
-            <p class="desc">Evidence of operational thinking: training, labor controls, incident response, and enforceable policy.</p>
+            <p class="desc">Operational playbook artifact: labor controls, incident response, training systems, and enforceable policy.</p>
             <div class="actions">
-              <a class="btn" href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noreferrer">open</a>
-            </div>
-          </a>
-
-          <!-- file: download on tile click -->
-          <a class="tile" href="/assets/docs/resume.pdf" download>
-            <div class="tilehead">
-              <h3 class="title">Resume (Formatted)</h3>
-              <span class="badge">PDF</span>
-            </div>
-            <p class="desc">Readable resume version for hiring teams.</p>
-            <div class="actions">
-              <a class="btn" href="/resume/">inline</a>
-              <a class="btn" href="/assets/docs/resume.pdf" target="_blank" rel="noreferrer">open</a>
-            </div>
-          </a>
-
-          <!-- file: download on tile click -->
-          <a class="tile" href="/assets/docs/ats-resume.pdf" download>
-            <div class="tilehead">
-              <h3 class="title">Resume (ATS)</h3>
-              <span class="badge">PDF</span>
-            </div>
-            <p class="desc">Parsing-friendly version for ATS ingestion.</p>
-            <div class="actions">
-              <a class="btn" href="/resume/#ats-inline">inline</a>
-              <a class="btn" href="/assets/docs/ats-resume.pdf" target="_blank" rel="noreferrer">open</a>
+              <span class="openhint">open</span>
+              <span class="openpill">Open <span class="mono">↗</span></span>
             </div>
           </a>
         </div>
@@ -94,18 +68,20 @@
       </div>
 
       <aside class="sidecard">
-        <p class="kicker">Portfolio map</p>
+        <p class="kicker">How to read this</p>
         <p class="meta">
-          If you only open two items: start with the governance case study, then the manager playbook.
+          If you only open one item, start with the governance case study. If you want supporting evidence of day-to-day operating systems,
+          open the manager playbook.
         </p>
 
         <div class="hr"></div>
 
+        <p class="kicker">Links</p>
         <div class="list">
           <a class="row" href="/assets/docs/workplace-governance-high-tempo.pdf" target="_blank" rel="noreferrer">
             <div class="rleft">
               <div class="rname">Governance case study</div>
-              <div class="rhint">control system • cadence • owners</div>
+              <div class="rhint">PDF</div>
             </div>
             <span class="badge">open</span>
           </a>
@@ -113,34 +89,14 @@
           <a class="row" href="/assets/docs/manager-playbook-2015-2024.pdf" target="_blank" rel="noreferrer">
             <div class="rleft">
               <div class="rname">Manager playbook</div>
-              <div class="rhint">execution under load • enforcement</div>
+              <div class="rhint">PDF</div>
             </div>
             <span class="badge">open</span>
-          </a>
-
-          <!-- non-file: open on click -->
-          <a class="row" href="/anduril/">
-            <div class="rleft">
-              <div class="rname">Anduril fit</div>
-              <div class="rhint">why the operating pattern maps</div>
-            </div>
-            <span class="badge">/anduril</span>
-          </a>
-
-          <!-- non-file: open on click -->
-          <a class="row" href="/resume/">
-            <div class="rleft">
-              <div class="rname">Resume page</div>
-              <div class="rhint">inline review + direct opens</div>
-            </div>
-            <span class="badge">/resume</span>
           </a>
         </div>
 
         <div class="hr"></div>
-        <p class="small">
-          Tiles download on click. Use “open” if you prefer in-browser viewing.
-        </p>
+        <p class="small">Anduril page is intentionally unlinked; it’s accessible only by direct URL.</p>
       </aside>
     </section>
 
